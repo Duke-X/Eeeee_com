@@ -1,0 +1,33 @@
+#services{
+    flex-direction: column;
+}
+#bar{
+    flex-direction: column;
+}
+#home{
+    height:370px;
+    padding:58px 30px;
+}
+#home::before{
+    height:480px;
+}
+#home p{
+    font-size: 13px;
+}
+.h-primary{
+    font-size: 2.8rem;
+    padding: -3px ;
+}
+#services .box #sweater{
+    height: 162px;
+}
+#services .box #wind{
+    height: 162px;
+}
+#services .box #modi{
+    height: 162px;
+}
+.btn{
+    padding: 5px 10px;
+    font-size: 12px;
+}

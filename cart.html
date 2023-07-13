@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width:1095px)"
+      href="CSS/phone.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Zilla+Slab:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/cart.css" />
+    <title>Cart | ChhatwalHosiery.com</title>
+    <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #e2e9e1;
+      border-left:none;
+      border-right: none;
+      margin-top: 100px;
+      font-family: "Zilla Slab", serif;
+      table-layout: fixed;
+      white-space: nowrap;
+    }
+    h1{
+      height: 100px;
+      font-size: 50px;
+    line-height: 248px;
+    color: black;
+    font-family: "Amatic SC",cursive;
+    letter-spacing: 3px;
+    text-align: center;
+    justify-content: center;
+    }
+    h2{
+      margin-left: 20px;
+      margin-top: 40px;
+      font-size: 40px;
+    }
+
+    th, td {
+      padding: 18px 18px 18px 18px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .total-row {
+      font-weight: bold;
+    }
+
+    .button {
+      padding: 5px 10px;
+      background-color: #1a1a1a;
+      border: none;
+      color: #ececec;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      margin: 2px;
+      cursor: pointer;
+    }
+
+    .quantity-input {
+      width: 40px;
+    }
+  </style>
+
+  </head>
+  <body>
+    <header>
+      <nav class="bar">
+        <div id="logo">
+          <img id="logo" src="../HTML/images/logo.png" alt="ChhatwalHosiery" />
+        </div>
+        <ul>
+          <li class="item">
+            <a href="D.K.C.Hosiery.html" target="_self">Home</a>
+          </li>
+          <li class="item"><a href="shop.html">Shop</a></li>
+          <li class="item"><a href="about.html" target="_self">About</a></li>
+          <li class="item">
+            <a href="contact.html" target="_self">Contact</a>
+          </li>
+          <li class="item">
+            <a class="active" href="cart.html"
+              ><ion-icon name="cart-outline"></ion-icon
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <h1>Clothing Shopping Cart</h1>
+  <table id="cart">
+    <tr>
+      <th>Item</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Size</th>
+      <th>Quantity</th>
+      <th>Subtotal</th>
+      <th></th>
+    </tr>
+  </table>
+  <h2>Total: Rs. <span id="total">0</span></h2>
+        
+
+    <footer>
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social_icon">
+        <li>
+          <a href="https://wa.me/9814398045" target="_blank"
+            ><ion-icon name="logo-whatsapp"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="mailto: dineshchhatwal18@gmail.com" target="_blank"
+            ><ion-icon name="mail-outline"></ion-icon
+          ></a>
+        </li>
+        <li>
+          <a href="http://www.instagram.com/dinesh_chhatwal" target="_blank"
+            ><ion-icon name="logo-instagram"></ion-icon
+          ></a>
+        </li>
+      </ul>
+      <ul class="menu">
+        <li><a href="D.K.C.Hosiery.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p id="rights">@2023 D.K.Chhatwal Hosiery | All Rights Reserved</p>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Get table element
+const cartTable = document.getElementById('cart');
+
+// Get total element
+const totalElement = document.getElementById('total');
+
+// Function to render the cart
+function renderCart() {
+  // Clear the table body
+  cartTable.innerHTML = `
+    <tr>
+      <th>Item</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Size</th>
+      <th>Quantity</th>
+      <th>Subtotal</th>
+      <th></th>
+    </tr>
+  `;
+
+  // Loop through items in the cart and render each row
+  for (let i = 0; i < cart.length; i++) {
+    const item = cart[i];
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${item.name}</td>
+      <td><img src="${item.image}" alt="${item.name}" width="60"></td>
+      <td>Rs. ${item.price}</td>
+      <td>
+        <select>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+        </select>
+      </td>
+      <td>
+        <input
+          type="number"
+          class="quantity-input"
+          min="1"
+          value="${item.quantity}"
+          onchange="updateQuantity(${i}, this.value)"
+        >
+      </td>
+      <td>Rs. ${item.price * item.quantity}</td>
+      <td>
+        <button onclick="removeItem(${i})" class="button">Remove</button>
+      </td>
+    `;
+    cartTable.appendChild(row);
+  }
+
+  // Update the total
+  const total = calculateTotal();
+  totalElement.textContent = total;
+}
+
+// Function to remove an item from the cart
+function removeItem(index) {
+  cart.splice(index, 1);
+
+  // Store the updated cart in local storage
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  renderCart();
+}
+
+// Function to update the quantity of an item in the cart
+function updateQuantity(index, quantity) {
+  cart[index].quantity = parseInt(quantity);
+
+  // Store the updated cart in local storage
+  localStorage.setItem('cart', JSON.stringify(cart));
+
+  renderCart();
+}
+
+// Function to calculate the total price of items in the cart
+function calculateTotal() {
+  let total = 0;
+
+  for (let i = 0; i < cart.length; i++) {
+    const item = cart[i];
+    total += item.price * item.quantity;
+  }
+
+  return total;
+}
+
+// Render the cart on page load
+renderCart();
+    </script>
+  </body>
+</html>

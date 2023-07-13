@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding:0;
+}
+#logo img {
+    height: 80px;
+    width: auto;
+    margin: 4px 5px;
+    border-radius: 90%;
+  }
+  h2{
+    font-size: 46px;
+    line-height: 64px;
+    color: black;
+    font-family: "Zilla Slab", serif;
+    padding-top: 90px;
+  }
+  p{
+    font-size: 19px;
+    margin: 15px 0px 20px 0;
+  }
+  .bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .bar ul {
+    display: flex;
+    font-family: "Amatic SC", cursive;
+    font-weight: 900;
+  }
+  .bar::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.663);
+    position: absolute;
+    height: 100%;
+    top:0;
+    width: 100%;
+    z-index: -1;
+  }
+  .bar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+  }
+  .bar ul li a {
+    color: white;
+    display: block;
+    margin: 2px;
+    padding: 1px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.4s ease;
+  }
+  .bar ul li a:hover,
+  .bar ul li a.active{
+    box-shadow: 0 0 10px 0 white;
+  }
+body{
+    background: url(../images/call.jpg) no-repeat center center fixed; 
+  /* -webkit-background-size: cover; */
+  /* -moz-background-size: cover; */
+  /* -o-background-size: cover; */
+  background-size: cover;
+  color: white;
+}
+.container{
+    width: 80%;
+    margin: 15px auto;
+    font-family: "Amatic SC", cursive;
+    font-size: 17px;
+}
+.contact-box{
+    background: white;
+    display: flex;
+    width:80%;
+    margin-left:153px;
+    font-family: 'Zilla Slab', serif;
+    opacity:0.84;
+}
+.contact-left{
+    flex-basis: 60%;
+    padding:40px 60px;
+    color:black;
+}
+.contact-right{
+    flex-basis: 56%;
+    padding: 40px;
+    background: black;
+    padding-left: 62px;
+}
+h1{
+    margin-bottom: 10px;
+}
+.container p{
+    margin-bottom: 40px;
+}
+.input-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.input-row .input-group{
+    flex-basis: 45%;
+}
+input{
+    width:100%;
+    border:none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding: 5px;
+}
+textarea{
+    width:100%;
+    border:1px solid #ccc;
+    outline:none;
+    padding: 10px;
+    box-sizing:border-box;
+}
+label{
+    margin-bottom: 6px;
+    display: block;
+    color: black;
+}
+button{
+    color:white;
+    background-color: black;
+    width: 100px;
+    border:none;
+    outline: none;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px black;
+}
+.contact-left h3{
+    color:black;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.contact-right h3{
+    color:white;
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-family: 'Zilla Slab', serif;
+}
+tr td:first-child{
+    padding-right: 20px;
+}
+tr td{
+    padding-top:40px;
+}
+.a{
+    font-size: 2em;
+}

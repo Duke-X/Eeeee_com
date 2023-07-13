@@ -1,0 +1,199 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  #logo img {
+    height: 80px;
+    width: auto;
+    margin: 4px 5px;
+    border-radius: 90%;
+  }
+  h2{
+    font-size: 46px;
+    line-height: 64px;
+    color: black;
+    font-family: "Zilla Slab", serif;
+    padding-top: 90px;
+  }
+  p{
+    font-size: 15px;
+    margin: 15px 0px 20px 0;
+  }
+  h3{
+    font-size: 40px;
+    font-family: "Amatic Sc", cursive;
+    letter-spacing: 3px;
+    font-weight: 600;
+    padding-bottom: 15px;
+  }
+  .bar {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+  }
+  .bar ul {
+    display: flex;
+    font-family: "Amatic SC", cursive;
+    font-weight: 900;
+  }
+  .bar::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.934);
+    position: absolute;
+    height: 100%;
+    top:0;
+    width: 433%;
+    z-index: -1;
+  }
+  .bar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+  }
+  .bar ul li a {
+    color: white;
+    display: block;
+    margin: 2px;
+    padding: 1px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.4s ease;
+  }
+  .bar ul li a:hover,
+  .bar ul li a.active{
+    box-shadow: 0 0 10px 0 white;
+  }
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.normal{
+    padding: 10px 10px 10px 10px;
+    margin: 2px;
+    color:#ececec;
+    background-color: #1a1a1aeb;
+    border: 1px solid #ececec;
+    transition: 0.3s ease;
+    font-family: "Zilla Slab", serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+.normal:hover{
+    color:#1a1a1aeb;
+    background-color: #ececec;
+    border: 1px solid #1a1a1aeb;
+}
+
+p{
+    font-size: 25px;
+    margin: 15px 0 20px 0;
+    font-family: "Amatic SC", cursive;
+    letter-spacing: 2px;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    background-color: rgba(0, 0, 0);
+    min-height: 100px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 500px;
+  }
+  footer .social_icon,
+  footer .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  footer .social_icon li,
+  footer .menu {
+    list-style: none;
+  }
+  footer .social_icon li a {
+    font-size: 2em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+  }
+  footer .social_icon li a:hover {
+    transform: translateY(-10px);
+  }
+  footer .menu li a {
+    font-size: 1.1em;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-family: "Zilla Slab", serif;
+  }
+  footer .menu li a:hover {
+    opacity: 1;
+  }
+  footer #rights {
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-family: "Zilla Slab", serif;
+  }
+  footer .wave {
+    position: absolute;
+    top: -100px;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    background: url(../images/wavy.png);
+    background-size: 1000px 100px;
+  }
+  footer .wave#wave1 {
+    z-index: -1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+  }
+  footer .wave#wave2 {
+    z-index: -999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 4s linear infinite;
+  }
+  footer .wave#wave3 {
+    z-index: -999;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+  }
+  footer .wave#wave4 {
+    z-index: -999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+  }
+  @keyframes animateWave {
+    0% {
+      background-position-x: 1000px;
+    }
+    100% {
+      background-position-x: 0px;
+    }
+  }
+  @keyframes animateWave_02 {
+    0% {
+      background-position-x: 0px;
+    }
+    100% {
+      background-position-x: 1000px;
+    }
+  }

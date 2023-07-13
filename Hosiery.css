@@ -1,0 +1,316 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+#logo img {
+  height: 80px;
+  width: auto;
+  margin: 4px 5px;
+  border-radius: 90%;
+}
+h2{
+  font-size: 46px;
+  line-height: 64px;
+  color: black;
+  font-family: "Zilla Slab", serif;
+  padding-top: 90px;
+}
+p{
+  font-size: 16px;
+  margin: 15px 0px 20px 0;
+}
+.bar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+}
+.bar ul {
+  display: flex;
+  font-family: "Amatic SC", cursive;
+  font-weight: 900;
+}
+.bar::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.934);
+  position: absolute;
+  height: 100%;
+  top:0;
+  width: 433%;
+  z-index: -1;
+}
+.bar ul li {
+  list-style: none;
+  font-size: 1.3rem;
+}
+.bar ul li a {
+  color: white;
+    display: block;
+    margin: 2px;
+    padding: 1px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+.bar ul li a:hover,
+.bar ul li a.active{
+  box-shadow: 0 0 10px 0 white;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  padding: 3px 138px;
+  height: 709px;
+  justify-content: center;
+  align-items: center;
+}
+#home::before {
+  content: "";
+  background: url(../images/knit.jpg) no-repeat center center/cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.28;
+  transform: rotateY(180deg);
+}
+#home h1 {
+  text-align: center;
+  color: rgb(0, 0, 0, 0.934);
+}
+#home p {
+  text-align: center;
+  color: rgb(0, 0, 0, 0.934);
+  font-size: 1.8rem;
+  font-family: "Zilla Slab", serif;
+  font-weight: 500;
+  line-height: 2;
+}
+.h-primary {
+  font-size: 3.8rem;
+  padding: 12px;
+  font-family: "Zilla Slab", serif;
+  font-weight: 900;
+  font-style: bold;
+  text-align: center;
+}
+.h-secondary {
+  font-size: 2.8rem;
+  padding: 12px;
+  text-align: center;
+  font-family: "Amatic SC", cursive;
+}
+.btn {
+  padding: 10px 20px;
+  border: 3px solid white;
+  background-color: rgb(0, 0, 0, 0.934);
+  color: white;
+  border-radius: 10px;
+  margin: 17px;
+  font-family: "Zilla Slab", serif;
+  font-size: 1.2rem;
+}
+
+.btn #call{
+  text-decoration: none;
+  color: white;
+}
+
+#services {
+  display: flex;
+  margin: 68px;
+}
+#services .box {
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+  background-color: snow;
+}
+#services .box #sweater {
+  height: 260px;
+  margin: auto;
+  display: block;
+  mix-blend-mode: multiply;
+}
+#services .box:hover {
+  transform: scale(1.1);
+  transition: all 0.8s;
+}
+#services .box #wind {
+  height: 260px;
+  margin: auto;
+  display: block;
+  mix-blend-mode:multiply;
+}
+#services .box #modi {
+  height: 260px;
+  margin: auto;
+  display: block;
+  mix-blend-mode: multiply;
+}
+.center {
+  line-height: 1.2;
+  font-family: "Amatic SC", cursive;
+  font-size: 24px;
+}
+.accordian{
+  justify-content: center;
+  align-items: center;
+  height: auto 40vh ;
+  width: auto;
+  padding: 40px;
+  background-color: snow;
+  margin-bottom: 170px;
+}
+.accordian-title{
+  margin-bottom: 25px;
+  text-align: center;
+  padding-top: 0;
+  font-size: 2.5rem;
+  font-family: "Zilla Slab", serif;
+}
+.accordian .content-container .question {
+  padding: 25px 0px;
+  font-size: 22px;
+  cursor: pointer;
+  border-bottom: 1px solid black;
+  position: relative;
+  font-family: "Zilla Slab", serif;
+  text-align: center;
+}
+.accordian .content-container .question::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+}
+.accordian .content-container .answer{
+  padding-top:15px;
+  font-size: 22px;
+  line-height: 1.5;
+  width: 100%;
+  max-height: 0px;
+  /* display: none; */
+  overflow: hidden; 
+  transition: .5s ease-out;
+  font-family: "Zilla Slab", serif;
+  text-align: center;
+}
+.accordian .question .active .answer{
+  height:150px;
+}
+.question::after{
+  content: "-";
+  font-size: 30px;
+  transition: .5s ease-out;
+}
+.active::after{
+  content: "-";
+  font-size: 20px;
+  transition: .5s ease-out;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  background-color: rgba(0, 0, 0);
+  min-height: 100px;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer .social_icon,
+footer .menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+footer .social_icon li,
+footer .menu {
+  list-style: none;
+}
+footer .social_icon li a {
+  font-size: 2em;
+  color: white;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+footer .social_icon li a:hover {
+  transform: translateY(-10px);
+}
+footer .menu li a {
+  font-size: 1.1em;
+  color: white;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-family: "Zilla Slab", serif;
+}
+footer .menu li a:hover {
+  opacity: 1;
+}
+footer #rights {
+  color: white;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0px;
+  width: 100%;
+  height: 100px;
+  background: url(../images/wavy.png);
+  background-size: 1000px 100px;
+}
+footer .wave#wave1 {
+  z-index: -1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 4s linear infinite;
+}
+footer .wave#wave2 {
+  z-index: -999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave_02 4s linear infinite;
+}
+footer .wave#wave3 {
+  z-index: -999;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWave 3s linear infinite;
+}
+footer .wave#wave4 {
+  z-index: -999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave_02 3s linear infinite;
+}
+@keyframes animateWave {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-position-x: 0px;
+  }
+}
+@keyframes animateWave_02 {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+
